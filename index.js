@@ -3,10 +3,10 @@ const mysql = require("mysql");
 
 // Create MySQL connection
 const connection = mysql.createConnection({
-  host: "sql9.freemysqlhosting.net",
-  user: "sql9633309",
-  password: "zcyYbqTjpV",
-  database: "sql9633309",
+  host: "db4free.net",
+  user: "mohamedragheb",
+  password: "moodyahmed22120014",
+  database: "mal3bko_db",
 });
 
 // Connect to the database
@@ -23,7 +23,7 @@ const app = express();
 
 // Define API endpoints
 app.get("/", (req, res) => {
-  connection.query("SELECT * FROM test", (err, rows) => {
+  connection.query("SELECT * FROM sports", (err, rows) => {
     if (err) {
       console.error("Error executing query: ", err);
       res.status(500).json({ error: "Internal server error" });
